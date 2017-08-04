@@ -133,7 +133,7 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
     // done initializing, no need to predict or update
     is_initialized_ = true;
 
-    std::cout << "Is initialized" << std::endl;
+    //std::cout << "Is initialized" << std::endl;
     return;
   }
 
@@ -144,15 +144,15 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
   {
     UpdateLidar(meas_package);
     //Debug
-    std::cout << "Update after Laser x = " << x_ << std::endl;
-    std::cout << "Update after Laser P = " << P_ << std::endl;
+    //std::cout << "Update after Laser x = " << x_ << std::endl;
+    //std::cout << "Update after Laser P = " << P_ << std::endl;
   }
   else if (meas_package.sensor_type_ == MeasurementPackage::RADAR)
   {
     UpdateRadar(meas_package);
     //Debug
-    std::cout << "Update after Radar x = " << x_ << std::endl;
-    std::cout << "Update after Radar P = " << P_ << std::endl;    
+    //std::cout << "Update after Radar x = " << x_ << std::endl;
+    //std::cout << "Update after Radar P = " << P_ << std::endl;    
   }
 
   time_us_ = meas_package.timestamp_;
