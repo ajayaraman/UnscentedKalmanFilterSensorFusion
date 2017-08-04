@@ -301,7 +301,7 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
 
   //Calculate NIS Score
   double NIS = z_diff.transpose() * innovation * z_diff;
-  std::cout << "NIS Radar = " << NIS << std::endl;
+  //std::cout << "NIS Laser = " << NIS << std::endl;
 }
 
 /**
@@ -396,5 +396,5 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
 
   //Calculate NIS Score
   double NIS = z_diff.transpose() * innovation * z_diff;
-  std::cout << "NIS Radar = " << NIS << std::endl;
+  //std::cout << "NIS Radar = " << NIS << std::endl;
 }
